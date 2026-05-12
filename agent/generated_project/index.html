@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Todo App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Colorful Todo App</h1>
+        <button id="theme-toggle" aria-label="Toggle light/dark theme">Toggle Theme</button>
+    </header>
+
+    <main class="todo-app">
+        <form id="new-task-form" aria-label="Add new task">
+            <input type="text" id="task-input" placeholder="Task description" aria-label="Task description" required>
+            <input type="date" id="due-date" aria-label="Due date">
+            <select id="priority-select" aria-label="Priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button type="submit" aria-label="Add task">Add</button>
+        </form>
+
+        <nav class="filter-nav" aria-label="Task filter navigation">
+            <button data-filter="all" aria-pressed="true">All</button>
+            <button data-filter="active" aria-pressed="false">Active</button>
+            <button data-filter="completed" aria-pressed="false">Completed</button>
+        </nav>
+
+        <ul id="task-list" aria-label="Task list"></ul>
+    </main>
+
+    <footer>
+        <p>© 2024 Colorful Todo App. Developed by OpenAI.</p>
+    </footer>
+</body>
+</html>
